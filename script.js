@@ -1,4 +1,3 @@
-// Site script: nav toggle, reveal on scroll, theme toggle, year
 (function () {
   // Elements
   const navToggle = document.getElementById("nav-toggle");
@@ -86,3 +85,4 @@
   });
 
 })();
+
