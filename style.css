@@ -1,0 +1,112 @@
+/* Reset & base (mobile-first) */
+:root{
+  --bg: #0f1720;
+  --card: rgba(255,255,255,0.06);
+  --muted: #cbd5e1;
+  --accent: #00eaff;
+  --text: #e6eef8;
+  --glass-border: rgba(255,255,255,0.06);
+  --shadow: 0 8px 24px rgba(2,6,23,0.6);
+}
+
+[data-theme="light"]{
+  --bg: #f4f7fb;
+  --card: rgba(255,255,255,0.7);
+  --muted: #334155;
+  --accent: #0b7285;
+  --text: #0b1220;
+  --glass-border: rgba(15,23,42,0.04);
+  --shadow: 0 8px 24px rgba(2,6,23,0.06);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,var(--bg), #071022 60%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+/* Layout */
+.container{width:calc(100% - 2rem);max-width:1100px;margin:0 auto}
+.section{padding:3.2rem 0}
+.card{
+  background:var(--card);
+  border-radius:14px;
+  padding:1.2rem;
+  border:1px solid var(--glass-border);
+  box-shadow:var(--shadow);
+  transition:transform .35s ease,opacity .35s ease;
+  opacity:0; transform: translateY(16px);
+}
+
+/* Header */
+.site-header{position:sticky;top:0;backdrop-filter:blur(6px);z-index:40;border-bottom:1px solid rgba(255,255,255,0.03)}
+.header-inner{display:flex;align-items:center;gap:1rem;padding:.85rem 0}
+.brand{font-weight:700;color:var(--text);text-decoration:none}
+.brand span{color:var(--accent)}
+.nav{display:none}
+.nav-list{list-style:none;padding:0;margin:0;display:flex;gap:.5rem}
+.nav-list a{text-decoration:none;color:var(--muted);padding:.45rem .6rem;border-radius:8px;font-weight:600}
+.nav-list a:hover,.nav-list a:focus{background:rgba(255,255,255,0.04);color:var(--text)}
+.header-actions{margin-left:auto;display:flex;gap:.6rem;align-items:center}
+.cta{display:inline-block;padding:.5rem .85rem;background:var(--accent);color:#021018;border-radius:10px;text-decoration:none;font-weight:700}
+.theme-toggle{background:transparent;border:0;color:var(--muted);font-size:1.05rem;cursor:pointer}
+.nav-toggle{background:transparent;border:0;padding:.4rem;margin-right:.25rem;display:inline-flex;align-items:center}
+.hamburger{width:22px;height:2px;background:var(--text);display:block;position:relative}
+.hamburger::before,.hamburger::after{content:"";position:absolute;left:0;width:22px;height:2px;background:var(--text);transition:transform .25s ease}
+.hamburger::before{top:-6px} .hamburger::after{top:6px}
+
+/* HERO */
+.hero-grid{display:grid;grid-template-columns:1fr;gap:1rem;align-items:start}
+.avatar{width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,0.06);display:block;margin:0 auto 1rem}
+.hero-card{text-align:center}
+.lead{color:var(--muted);margin-top:.4rem}
+.accent{color:var(--accent)}
+.skills{list-style:disc;margin:.6rem 0 0;padding-left:1.2rem;color:var(--muted)}
+.skills li{margin:.25rem 0}
+
+/* Projects grid */
+.project-grid{display:grid;grid-template-columns:1fr;gap:1rem}
+.project-card img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:.6rem}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1fr;gap:1rem;align-items:start}
+.about-avatar{width:100%;max-width:320px;height:auto;display:block;margin:0 auto}
+
+/* Contact */
+.contact-card{text-align:center}
+
+/* Footer */
+.site-footer{padding:1.2rem 0;border-top:1px solid rgba(255,255,255,0.03);margin-top:2rem}
+.footer-inner{display:flex;justify-content:space-between;gap:1rem;align-items:center}
+.socials a{color:var(--muted);text-decoration:none;margin-left:1rem}
+
+/* Focus states */
+a:focus, button:focus {outline:3px solid rgba(0,0,0,0.08);outline-offset:3px}
+
+/* Reveal animation utility */
+.card.visible{opacity:1;transform:none}
+
+/* Responsive breakpoints */
+@media(min-width:700px){
+  .nav{display:block}
+  .nav-toggle{display:none}
+  .nav-list a{padding:.6rem .9rem}
+  .hero-grid{grid-template-columns: 1fr 380px; gap:2rem; align-items:center}
+  .project-grid{grid-template-columns:repeat(3,1fr)}
+  .about-grid{grid-template-columns:320px 1fr}
+}
+
+@media(min-width:1000px){
+  .container{width:92%}
+}
+
+/* small visual polish */
+.btn{display:inline-block;padding:.55rem .9rem;border-radius:10px;background:var(--accent);color:#021018;text-decoration:none;font-weight:700}
+.btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text)}
+.link{color:var(--accent);text-decoration:none;font-weight:600}

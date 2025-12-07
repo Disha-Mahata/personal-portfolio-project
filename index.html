@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Disha — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Home">Disha<span>Portfolio</span></a>
+
+      <button id="nav-toggle" class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open menu">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav id="primary-navigation" class="nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-pressed="false" title="Toggle theme">🌙</button>
+        <a class="cta" href="resume.pdf" download>Resume</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-card card glass" role="region" aria-labelledby="hero-title">
+          <img src="profile.jpg" alt="Profile photo" class="avatar" />
+          <h1 id="hero-title">Hi, I’m <span class="accent">Disha</span></h1>
+          <p class="lead">Frontend Developer • Java & MySQL • Problem solver</p>
+          <p class="hero-actions">
+            <a class="btn" href="projects.html">View Projects</a>
+            <a class="btn btn-outline" href="about.html">About Me</a>
+          </p>
+        </div>
+
+        <div class="skills-card card glass">
+          <h3>Skills</h3>
+          <ul class="skills">
+            <li>HTML & Semantic Markup</li>
+            <li>CSS (Flexbox, Grid, Responsive)</li>
+            <li>Vanilla JavaScript</li>
+            <li>Java • MySQL • Git</li>
+            <li>Responsive & Accessible UI</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS PREVIEW -->
+    <section class="section projects-preview">
+      <div class="container">
+        <h2>Selected Projects</h2>
+        <div class="project-grid">
+          <article class="project-card card glass">
+            <img src="project1.png" alt="Project 1 screenshot" />
+            <h3>Portfolio Website</h3>
+            <p>Modern responsive portfolio built with HTML, CSS, and JS.</p>
+            
+          </article>
+
+          <article class="project-card card glass">
+            <img src="project2.png" alt="Project 2 screenshot" />
+            <h3>Ecommerce shopping cart</h3>
+            <p>Java + MySQL Ecommerce shopping cart system.</p>
+            
+          </article>
+
+          <article class="project-card card glass">
+            <img src="project3.png" alt="Project 3 screenshot" />
+            <h3>Contact form</h3>
+            <p>contact form using html,css ang JavaScript.</p>
+           
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact-section">
+      <div class="container contact-card card glass">
+        <h2>Contact</h2>
+        <p>I'm open to internships, freelance &collab. Reach me at:</p>
+        <p><strong>Email:</strong> <a href="mailto:yourmail@gmail.com">dishamahata2009@gmail.com</a></p>
+        <p class="small">Or connect via GitHub / LinkedIn — links in the footer.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Disha. Built with ♥</p>
+      <div class="socials">
+        <a href="#" aria-label="GitHub profile">GitHub</a>
+        <a href="#" aria-label="LinkedIn profile">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

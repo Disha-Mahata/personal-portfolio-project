@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects — Disha</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Your<span>Portfolio</span></a>
+      <button id="nav-toggle" class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open menu">
+        <span class="hamburger"></span>
+      </button>
+      <nav id="primary-navigation" class="nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a class="active" href="projects.html">Projects</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-pressed="false">🌙</button>
+        <a class="cta" href="assets/resume.pdf" download>Resume</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section projects-full">
+      <div class="container">
+        <h1>Projects</h1>
+
+        <article id="project1" class="project-detail card glass">
+          <div class="project-meta">
+            <img src="assets/screenshots/project1.png" alt="Project 1 preview" />
+            <div>
+              <h2>Portfolio Website</h2>
+              <p>Technologies: HTML, CSS, JavaScript</p>
+              <p>Short summary: Responsive portfolio showcasing projects and skills.</p>
+              <p><a class="btn" href="#">Live Demo</a> <a class="btn btn-outline" href="#">GitHub</a></p>
+            </div>
+          </div>
+        </article>
+
+        <article id="project2" class="project-detail card glass">
+          <div class="project-meta">
+            <img src="assets/screenshots/project2.png" alt="Project 2 preview" />
+            <div>
+              <h2>Ecommerce shopping cart System</h2>
+              <p>Technologies: Java, MySQL</p>
+              <p>Short summary: A view of selected items in cart with bill at last.</p>
+              <p><a class="btn" href="#">Demo</a> <a class="btn btn-outline" href="#">Code</a></p>
+            </div>
+          </div>
+        </article>
+
+        <article id="project3" class="project-detail card glass">
+          <div class="project-meta">
+            <img src="assets/screenshots/project3.png" alt="Project 3 preview" />
+            <div>
+              <h2>Contact form</h2>
+              <p>Technologies: JS, HTML ,CSS</p>
+              <p>Short summary: contact form for user communication.</p>
+              <p><a class="btn" href="#">Live</a> <a class="btn btn-outline" href="#">Source</a></p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year-projects"></span>Disha</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

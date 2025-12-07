@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Disha</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Reuse same header markup as index.html -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Your<span>Portfolio</span></a>
+      <button id="nav-toggle" class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open menu">
+        <span class="hamburger"></span>
+      </button>
+      <nav id="primary-navigation" class="nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a class="active" href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-pressed="false">🌙</button>
+        <a class="cta" href="resume.pdf" download>Resume</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section about">
+      <div class="container about-grid">
+        <img src="profile.png" alt="Disha class="about-avatar card glass" />
+        <div class="about-text card glass">
+          <h1>About Me</h1>
+          <p>I am a web developer enthusiastic about building beautiful and accessible user interfaces. I enjoy solving problems, learning new technologies, and writing clean code.</p>
+
+          <h3>Tools & Technologies</h3>
+          <ul class="tools">
+            <li>HTML5, CSS3, JavaScript (ES6+)</li>
+            <li>Git, GitHub</li>
+            <li>Java, MySQL</li>
+            <li>Responsive Design & Accessibility</li>
+          </ul>
+
+          <h3>Education</h3>
+          <p>B.Tech in Computer Science ( 2024 - 2028)</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year-about"></span> Disha</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
