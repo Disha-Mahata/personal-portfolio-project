@@ -48,6 +48,19 @@
       localStorage.setItem('theme', next);
     });
   }
+function toggleTheme() {
+  document.body.classList.toggle("dark-theme");
+
+  // save theme in browser
+  localStorage.setItem("theme",
+    document.body.classList.contains("dark-theme") ? "dark" : "light"
+  );
+}
+
+// load saved theme
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark-theme");
+}
 
   // Simple reveal on scroll
   function revealOnScroll() {
@@ -85,4 +98,5 @@
   });
 
 })();
+
 
